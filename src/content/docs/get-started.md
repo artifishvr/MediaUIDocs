@@ -1,6 +1,6 @@
 ---
-title: Example Reference
-description: A reference page in my new Starlight docs site.
+title: Get Started
+description: A guide to install and set up MediaUI in your VRChat world.
 ---
 
 Reference pages are ideal for outlining how things work in terse and clear terms.

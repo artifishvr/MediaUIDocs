@@ -6,7 +6,7 @@ import starlight from "@astrojs/starlight";
 export default defineConfig({
   integrations: [
     starlight({
-      title: "My Docs",
+      title: "MediaUI Docs",
       social: [
         {
           icon: "discord",
@@ -16,10 +16,11 @@ export default defineConfig({
       ],
       sidebar: [
         {
-          label: "Guides",
+          label: "Quickstart",
           items: [
             // Each item here is one entry in the navigation menu.
-            { label: "Example Guide", slug: "guides/example" },
+            { label: "Installation", slug: "get-started" },
+            { label: "Supported APIs", slug: "apis" },
           ],
         },
         {
