@@ -1,0 +1,88 @@
+---
+title: Get Started
+description: A guide to install and set up MediaUI in your VRChat world.
+---
+
+import { FileTree, Tabs, TabItem } from '@astrojs/starlight/components';
+
+
+## Prerequisites
+
+A basic understanding of Unity and VRChat world building is assumed. 
+
+You will need:
+
+- A VRChat SDK3 World project on Unity 2022.3.22f1 or later.
+- A supported videoplayer prefab (or the ability to modify scripts to add support). 
+    - [VizVid](https://github.com/JLChnToZ/VVMW) is recommended.
+    - [YAMAPlayer](https://github.com/koorimizuw/YamaPlayer), [ProTV](https://protv.dev/), and USharpVideo are also supported out of the box.
+
+## Download the MediaUI Package
+
+Download the latest version of the MediaUI package (v0.6.1) and import it into Unity ([tutorial](https://youtu.be/ZYJ7idfeuZQ)).
+
+##### [Download Link](/dl/MediaUI%20v0.6.1.unitypackage) 
+
+(A VRChat Package Repository & repository on GitHub will be available in the future for easier updates and transparency.)
+
+## Setting Up MediaUI in Your VRChat World
+
+Once you have imported the package, you should be able to see the MediaUI folder and prefab.
+
+<FileTree>
+
+- Assets/
+  - MediaUI
+    - Scripts/
+    - UI&nbsp;Assets/
+    - **MediaUI.prefab**
+  - ...
+- Packages/
+
+</FileTree>
+
+Drag and drop the **MediaUI.prefab** into your scene hierarchy and position it however you want.
+
+Open the MediaUI GameObject in the hierarchy and select the **NyaResultsManager** object underneath it.
+
+From here, instructions depend on your chosen videoplayer prefab.
+
+
+<Tabs>
+  <TabItem label="VizVid">
+    Drag these two objects from your vidvid prefab into the respective fields in the NyaResultsManager component, as shown in this picture
+
+    ![Unity Hierarchy with annotation](../../assets/Unity_GaIh53RVKF.png)
+
+    Depending on your prefab, it can also look more similar to this
+
+    ![Unity Hierarchy with annotation](../../assets/Unity_SytvOrxiiH.png)
+
+    If you're unsure which objects to use, the `Video Player UI Controller` object should be the one with the VizVid **UI Handler** script, and the `Url Input Field` should be the one referenced in that script.
+
+  </TabItem>
+  <TabItem label="ProTV3">
+      Drag these two objects from your ProTV3 prefab into the respective fields in the NyaResultsManager component, as shown in this picture
+
+    ![Unity Hierarchy with annotation](../../assets/explorer_FlGe6ZxNSh.png)
+
+    If you're unsure which objects to use, the `Video Player UI Controller` object should be the one with the ProTV3 **Media Controls** script, and the `Url Input Field` should be the one referenced in that script under `Main Url Input`.
+
+  </TabItem>
+  <TabItem label="ProTV2">
+      This prefab is supported, but docs have not been written yet. It *should* be similar to the ProTV3 setup.
+  </TabItem>
+    <TabItem label="YAMAPlayer">
+      This prefab is supported, but docs have not been written yet. It *should* be similar to the other setups.
+  </TabItem>
+  <TabItem label="USharpVideo">
+      This prefab is supported, but docs have not been written yet. It *should* be similar to the other setups.
+  </TabItem>
+
+</Tabs>
+
+## Done!
+
+You should now be able to build and test your world and play media from any of the [supported APIs](/apis) using MediaUI!
+
+If you run into any issues, feel free to join our [Discord](https://discord.gg/KcU9BnEKEK) for help.

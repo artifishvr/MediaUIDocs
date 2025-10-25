@@ -23,10 +23,10 @@ export default defineConfig({
             { label: "Supported APIs", slug: "apis" },
           ],
         },
-        {
-          label: "Reference",
-          autogenerate: { directory: "reference" },
-        },
+        // {
+        //   label: "Reference",
+        //   autogenerate: { directory: "reference" },
+        // },
       ],
     }),
   ],
