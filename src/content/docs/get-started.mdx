@@ -58,16 +58,18 @@ From here, instructions depend on your chosen videoplayer prefab.
 
     ![Unity Hierarchy with annotation](../../assets/Unity_SytvOrxiiH.png)
 
+    <Aside type="note">
     If you're unsure which objects to use, the `Video Player UI Controller` object should be the one with the VizVid **UI Handler** script, and the `Url Input Field` should be the one referenced in that script.
-
+    </Aside>
   </TabItem>
   <TabItem label="ProTV3">
     Drag these two objects from your ProTV3 prefab into the respective fields in the NyaResultsManager component, as shown in this picture
 
     ![Unity Hierarchy with annotation](../../assets/explorer_FlGe6ZxNSh.png)
 
+    <Aside type="note">
     If you're unsure which objects to use, the `Video Player UI Controller` object should be the one with the ProTV3 **Media Controls** script, and the `Url Input Field` should be the one referenced in that script under `Main Url Input`.
-
+    </Aside>
   </TabItem>
   <TabItem label="YAMAPlayer">
     Drag these two objects from your YAMAPlayer prefab into the respective fields in the NyaResultsManager component, as shown in this picture
@@ -78,7 +80,9 @@ From here, instructions depend on your chosen videoplayer prefab.
     Make sure it's under the **Top** gameobject, not LeftSide, RightSide, or Bottom!
     </Aside>
 
+    <Aside type="note">
     If you're unsure which objects to use, the `Video Player UI Controller` object should be the one with the YAMAPlayer **UI Controller** script, and the `Url Input Field` should be the one referenced in that script under `Url Input Field Top`.
+    </Aside>
   </TabItem>
   <TabItem label="USharpVideo">
     Drag these two objects from your USharpVideo prefab into the respective fields in the NyaResultsManager component, as shown in this picture
@@ -86,8 +90,10 @@ From here, instructions depend on your chosen videoplayer prefab.
     ![Unity Hierarchy with annotation](../../assets/Unity_IYMCnVi4lh.png)
 
     You will also have to change USharpVideo to only use AVPro as the default video backend, as other backends are not supported by MediaUI. (Switching will be done automatically in future versions.)
-
+    
+    <Aside type="note">
     If you're unsure which objects to use, the `Video Player UI Controller` object should be the one with the USharpVideo **Video Control Handler** script, and the `Url Input Field` should be the one referenced in that script under `Url Field`.
+    </Aside>
   </TabItem>
   <TabItem label="ProTV2">
     This prefab is supported, but docs have not been written. It *should* be similar to the ProTV3 setup.
