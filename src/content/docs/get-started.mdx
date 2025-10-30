@@ -3,7 +3,7 @@ title: Get Started
 description: A guide to install and set up MediaUI in your VRChat world.
 ---
 
-import { FileTree, Tabs, TabItem } from '@astrojs/starlight/components';
+import { FileTree, Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
 
 ## Prerequisites
@@ -19,11 +19,11 @@ You will need:
 
 ## Download the MediaUI Package
 
-Download the latest version of the MediaUI package (v0.6.1) and import it into Unity ([tutorial](https://youtu.be/ZYJ7idfeuZQ)).
+Download the latest version of the MediaUI package (v0.7.0) and import it into Unity ([tutorial](https://youtu.be/ZYJ7idfeuZQ)).
 
-##### [Download Link](/dl/MediaUI%20v0.6.1.unitypackage) 
+##### [Download Link](/dl/MediaUI%20v0.7.0.unitypackage) 
 
-(A VRChat Package Repository & repository on GitHub will be available in the future for easier updates and transparency.)
+(A VRChat Package Repository & public repository on GitHub will be available in the future for easier updates and transparency.)
 
 ## Setting Up MediaUI in Your VRChat World
 
@@ -62,21 +62,35 @@ From here, instructions depend on your chosen videoplayer prefab.
 
   </TabItem>
   <TabItem label="ProTV3">
-      Drag these two objects from your ProTV3 prefab into the respective fields in the NyaResultsManager component, as shown in this picture
+    Drag these two objects from your ProTV3 prefab into the respective fields in the NyaResultsManager component, as shown in this picture
 
     ![Unity Hierarchy with annotation](../../assets/explorer_FlGe6ZxNSh.png)
 
     If you're unsure which objects to use, the `Video Player UI Controller` object should be the one with the ProTV3 **Media Controls** script, and the `Url Input Field` should be the one referenced in that script under `Main Url Input`.
 
   </TabItem>
-  <TabItem label="ProTV2">
-      This prefab is supported, but docs have not been written yet. It *should* be similar to the ProTV3 setup.
-  </TabItem>
-    <TabItem label="YAMAPlayer">
-      This prefab is supported, but docs have not been written yet. It *should* be similar to the other setups.
+  <TabItem label="YAMAPlayer">
+    Drag these two objects from your YAMAPlayer prefab into the respective fields in the NyaResultsManager component, as shown in this picture
+
+    ![Unity Hierarchy with annotation](../../assets/Unity_I1RRD4LSIH.png)
+
+    <Aside type="caution">
+    Make sure it's under the **Top** gameobject, not LeftSide, RightSide, or Bottom!
+    </Aside>
+
+    If you're unsure which objects to use, the `Video Player UI Controller` object should be the one with the YAMAPlayer **UI Controller** script, and the `Url Input Field` should be the one referenced in that script under `Url Input Field Top`.
   </TabItem>
   <TabItem label="USharpVideo">
-      This prefab is supported, but docs have not been written yet. It *should* be similar to the other setups.
+    Drag these two objects from your USharpVideo prefab into the respective fields in the NyaResultsManager component, as shown in this picture
+    
+    ![Unity Hierarchy with annotation](../../assets/Unity_IYMCnVi4lh.png)
+
+    You will also have to change USharpVideo to only use AVPro as the default video backend, as other backends are not supported by MediaUI. (Switching will be done automatically in future versions.)
+
+    If you're unsure which objects to use, the `Video Player UI Controller` object should be the one with the USharpVideo **Video Control Handler** script, and the `Url Input Field` should be the one referenced in that script under `Url Field`.
+  </TabItem>
+  <TabItem label="ProTV2">
+    This prefab is supported, but docs have not been written. It *should* be similar to the ProTV3 setup.
   </TabItem>
 
 </Tabs>
@@ -84,5 +98,7 @@ From here, instructions depend on your chosen videoplayer prefab.
 ## Done!
 
 You should now be able to build and test your world and play media from any of the [supported APIs](/apis) using MediaUI!
+
+You can scale, rotate, and position the MediaUI prefab as needed to fit your world design. Keep in mind scales drastically different than the default may cause issues.
 
 If you run into any issues, feel free to join our [Discord](https://discord.gg/KcU9BnEKEK) for help.

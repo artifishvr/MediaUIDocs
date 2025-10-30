@@ -23,6 +23,14 @@ export default defineConfig({
             { label: "Supported APIs", slug: "apis" },
           ],
         },
+        {
+          label: "Additional Resources",
+          items: [
+            // Each item here is one entry in the navigation menu.
+            { label: "Changelog", slug: "changelog" },
+            { label: "License", slug: "license" },
+          ],
+        },
         // {
         //   label: "Reference",
         //   autogenerate: { directory: "reference" },
