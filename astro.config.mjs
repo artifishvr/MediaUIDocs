@@ -36,6 +36,16 @@ export default defineConfig({
         //   autogenerate: { directory: "reference" },
         // },
       ],
+      head: [
+        {
+          tag: "script",
+          attrs: {
+            src: "https://a.arti.lol/js/script.file-downloads.outbound-links.js",
+            defer: true,
+            "data-domain": "mediaui.vrc.bz",
+          },
+        },
+      ],
     }),
   ],
 });
