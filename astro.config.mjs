@@ -13,6 +13,11 @@ export default defineConfig({
           label: "Discord",
           href: "https://discord.gg/KcU9BnEKEK",
         },
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/artifishvr/MediaUI",
+        },
       ],
       sidebar: [
         {
